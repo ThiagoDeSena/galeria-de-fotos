@@ -1,73 +1,74 @@
-# React + TypeScript + Vite
+# 📸 Galeria de Fotos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma aplicação de galeria de fotos moderna desenvolvida com **React 19**, **Vite** e **TypeScript**. O projeto utiliza a API pública do [JSONPlaceholder](https://jsonplaceholder.typicode.com) para buscar e filtrar imagens, aplicando conceitos avançados de **Clean Architecture** para garantir um código escalável e de fácil manutenção.
+<p align="center">
+<img width="1919" height="1023" alt="Captura de tela 2026-01-09 114109" src="https://github.com/user-attachments/assets/ac005f7e-377a-4368-82d3-927868705b2b" />
+</p>
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* **React 19 & Vite**: Fast refresh e build otimizado.
+* **TypeScript**: Tipagem estática para maior segurança no desenvolvimento.
+* **Material UI (MUI) v7**: Componentes de interface robustos e ícones.
+* **Tailwind CSS v4**: Estilização utilitária e responsiva.
+* **Axios**: Cliente HTTP para consumo de API com instâncias configuradas.
 
-## React Compiler
+## 🏗️ Arquitetura do Projeto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O projeto segue o padrão **Clean Architecture**, dividido nas seguintes camadas:
 
-## Expanding the ESLint configuration
+* **`domain`**: Contém as entidades de negócio (`PhotoTO`) e os casos de uso (`PhotoUseCase`), sendo totalmente independente de frameworks.
+* **`infrastructure`**: Implementa a comunicação com serviços externos via Axios (`photoApi`).
+* **`application`**: Gerencia o estado e a orquestração através de Hooks customizados (`usePhotos`).
+* **`presentation`**: Componentes visuais organizados e reutilizáveis (Header, SearchBar, PhotoGrid, etc.).
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📦 Como rodar o projeto localmente
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Siga os passos abaixo para configurar o ambiente:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1. **Clone o repositório:**
+```bash
+git clone https://github.com/seu-usuario/galeria-de-fotos.git
+cd galeria-de-fotos
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+2. **Instale as dependências:**
+```bash
+npm install
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+
+
+3. **Inicie o servidor de desenvolvimento:**
+```bash
+npm run dev
+
+```
+
+
+4. **Acesse no navegador:**
+Abra `http://localhost:5173` para visualizar a aplicação.
+
+## 🛠️ Scripts Disponíveis
+
+* `npm run dev`: Inicia o servidor local.
+* `npm run build`: Gera a versão de produção na pasta `dist`.
+* `npm run lint`: Executa o ESLint para verificar erros de padronização no código.
+
+---
+
+## Desenvolvedor 
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/55b10cab-bbaf-4dd1-bcbc-2d9752e37cf5" width="100px;" style="border-radius: 50%;" alt="Foto do Desenvolvedor"/>
+  <br />
+  <sub><b>Thiago De Sena</b></sub>
+  <br />
+  
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/thiago-de-sena-developer/)
+</div>
+
+
+---
