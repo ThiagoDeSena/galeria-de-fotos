@@ -1,6 +1,6 @@
 # 📸 Galeria de Fotos
 
-Uma aplicação de galeria de fotos moderna desenvolvida com **React 19**, **Vite** e **TypeScript**. O projeto utiliza a API pública do [JSONPlaceholder](https://jsonplaceholder.typicode.com) para buscar e filtrar imagens, aplicando conceitos avançados de **Clean Architecture** para garantir um código escalável e de fácil manutenção.
+Uma aplicação de galeria de fotos moderna desenvolvida com **React**, **Vite** e **TypeScript**. O projeto utiliza a API pública do [JSONPlaceholder](https://jsonplaceholder.typicode.com) para buscar e filtrar imagens, aplicando conceitos avançados de **Clean Architecture** para garantir um código escalável e de fácil manutenção.
 <p align="center">
 <img width="1919" height="1023" alt="Captura de tela 2026-01-09 114109" src="https://github.com/user-attachments/assets/ac005f7e-377a-4368-82d3-927868705b2b" />
 </p>
@@ -28,7 +28,7 @@ Siga os passos abaixo para configurar o ambiente:
 
 1. **Clone o repositório:**
 ```bash
-git clone https://github.com/seu-usuario/galeria-de-fotos.git
+git clone https://github.com/ThiagoDeSena/galeria-de-fotos.git
 cd galeria-de-fotos
 
 ```
